@@ -1,0 +1,849 @@
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+ul,
+ol,
+li {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: inherit;
+    font-size: inherit;
+}
+html,
+body {
+    height: 100%;
+    line-height: 1;
+    font-size: 14px;
+    color: #000;
+    font-family: Montserrat;
+    background: #ECE9E9;
+}
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+}
+._container {
+    max-width: 1170px;
+    margin: 0px auto; 
+    padding: 0px 15px;
+    box-sizing: content-box;
+}
+/* ------Картинка заднего плана------------------------------------------------------------------------------------------ */
+._background_image {
+    height: 150px;
+    background: url('../Images/Background.png');
+}
+/* ------ШАПКА------------------------------------------------------------------------------------------ */
+.header {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 50;
+    align-content: center;
+    margin-top: 150px;
+    margin-bottom: -20px;
+    background: #443C3C;
+    border-top: 4px solid #FF6666;
+    border-bottom: 4px solid #FF6666;
+}
+.header__container {
+    display: flex;
+    max-height: 70px;
+    align-items: center;
+    
+}
+.header__logo {
+    display: flex;
+    align-items: center;
+}
+.header__logo-image {
+    border-radius: 5px;
+}
+.header__logo-text {
+    color: #fff;
+    margin-left: 13px;
+}
+.header__logo_text-first {
+    font-size: 20px;
+}
+.header__logo_text-second {
+    font-size: 14px;
+}
+.header__menu{
+    margin: 0px 0px 0px auto;
+    padding: 0 10px;
+}
+.menu__list{
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.menu__item:not(:last-child) {
+    align-content: center;
+}
+.menu__link {
+    color: #fff;
+    line-height: 166%;
+    padding: 28px 12px;
+    text-align: center;
+}
+._item1 {
+    background: #FF6666;
+    padding: 26px 12px;
+}
+
+@media (max-width: 1000px) {
+    .header__container {
+        flex-wrap: wrap;
+        max-height: 200px;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    .header__logo {
+        margin: -10px auto;
+        padding-bottom: 14px;
+        padding-right: 51px;
+    }
+    .header__menu{
+        margin: 0px auto;
+    } 
+    .header {
+        margin-top: 50px;
+    }
+    
+}
+@media (max-width: 740px) {
+    .header__logo {
+        display: none;
+        align-items: center;
+    }
+    .header__menu{
+        display: block;
+        margin: 0px;
+        padding: 0;
+    }
+    .menu__list{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    ._item1 {
+        float: left;
+        width: 100%;
+        height: 25%;
+        padding: 6px 0px;
+ 
+    }
+    ._item2 {
+        float: left;
+        width: 50%;
+        height: 25%;
+        padding: 6px 0px;
+        border-right: 1px solid #FF6666;
+        border-left: 1px solid #FF6666;
+        border-top: 1px solid #FF6666;
+        border-bottom: 0px solid #FF6666;
+        
+    }
+    ._container {
+        padding: 0px;
+    }
+    .header {
+        margin-top: 0px;
+    }
+    .content-block__container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .content-block__updates {
+        float: left;
+        width: 100%;
+        margin-bottom: 20px;
+        padding-right: 0 !important;
+    }
+    .new-on-page_content {
+        display: block !important;
+    }
+    .content_item {
+        width: 100% !important;
+        margin-left: 0 !important;
+    }
+    .new-filter_filter {
+        width: 70% !important;
+        margin: 0 auto;
+    }
+    .select_audio_player {
+        display: block !important;
+    }
+    .select_audio, .select_player {
+        width: 100% !important;
+        /* margin-left: 0 !important;
+        margin-right: 0 !important; */
+    }
+    .select_audio {
+        margin-right: 0% !important;
+    }
+    .select_player {
+        margin-left: 0% !important;
+    }
+
+}
+@media (max-width: 1006px) {
+    .filter_filter {
+        display: none  !important;
+    }
+    .new-filter__container {
+        display: block !important;
+    }
+    .new-filter_new-on-page {
+        width: 100% !important;
+    }
+    .new-filter_filter {
+        width: 50% !important;
+        margin: 0 auto;
+    }
+    .main-page_content {
+        width: 100% !important;
+    }
+}
+@media (max-width: 400px) {
+    .new-filter_filter {
+        width: 100% !important;
+    }
+    .content_item {
+        display: block !important;
+    }
+    .content_item-image img {
+        width: 100% !important;
+    }
+}
+@media (max-width: 577px) {
+    .new-filter_new-on-page2 {
+        display: block !important;
+    }
+    .description_header-phone {
+        display: block !important;
+    }
+    .description_header {
+        display: none;
+    }
+    .description_image {
+        height: 700px !important;
+        width: 100% !important;
+        margin-bottom: 20px !important;
+    }
+    .batch_number-item {
+        font-size: 28px !important;
+        width: 12.25% !important;
+        padding: 30px 45px !important;
+        margin-right: 10px !important;
+        margin-bottom: 5px ;
+    }
+}
+
+/* --------Page------------------------------------------------------------------ */
+.page {
+    flex: 1 1 auto;
+    margin-top: 100px;
+}
+
+/* --------Main block------------------------------------------------------------------ */
+/* --------Searh------------------------------------------------------------------ */
+.page__main-block {
+    margin-bottom: 30px;
+}
+.main-block__find-anime {
+    box-sizing: border-box;
+    margin-left: 12px;
+    font-size: 17px;
+    font-weight: 400;
+    font-style: italic;
+    color: #B0B0B0;
+}
+.main-block__search-button, .main-block__search {
+    background: #FFFFFF;
+}
+.main-block__search-form {
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+}
+.main-block__search {
+    height: 55px;
+    width: 100%;
+    padding-left: 12px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+}
+.main-block__search-button {
+    height: 46px;
+    width: 46px;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    cursor: pointer;
+}
+/* --------Season Anime------------------------------------------------------------------ */
+._default_section-header {
+    width: 100%;
+    height: 50px;
+    padding: 18px 5px;
+    text-align: center;
+    background: #443B3B;
+    color: #fff;
+    border-top: 2px solid #FF6666;
+    border-bottom: 2px solid #FF6666;
+}
+/* --------Anime List------------------------------------------------------------------ */
+.page__season-anime {
+    margin-bottom: 20px;
+}
+.season-anime__item-container {
+    position: relative;
+    
+}
+.season-anime__item-name {
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.8);
+    height: 42px;
+    width: 100%;
+}
+.season-anime__list {
+    display: flex;
+    overflow-x: auto;
+}
+.season-anime__list::-webkit-scrollbar {
+    width: 1;
+}
+
+/* --------Anime Content------------------------------------------------------------------ */
+/* --------Updates------------------------------------------------------------------ */
+.page__content-block {
+    margin-bottom: 20px;
+}
+.content-block__container {
+    display: flex;
+    flex: 0 1 50%;
+}
+.content-block__updates {
+    display: block;
+    /* width: 50%; */
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+    padding: 0 20px 0 0;
+}
+.content-block__header {
+    width: 100%;
+    height: 50px;
+    padding: 15px 5px;
+    background: #443B3B;
+    color: #fff;
+    border-top: 2px solid #FF6666;
+    border-bottom: 2px solid #FF6666;
+}
+.content-block__header h3 {
+    font-size: 15px;
+    text-align: center;
+}
+.content-block__header a {
+    color: #fff;
+    font-size: 13px;
+    text-decoration: underline;
+    text-align: right;
+    
+}
+.content-block__updates-content {
+    display: block;
+    max-height: 665px;
+}
+.updates-content_item {
+    display: flex;
+    color: #000;
+    height: 48px;
+    font-size: 14px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+}
+._item-date {
+    width: 13.68%;
+    text-align: center;
+    margin: auto;
+    box-shadow: 1px 0px 0px rgba(0, 0, 0, 0.25);
+}
+._item-image {
+    width: 7.54%;
+}
+.updates-content_info
+{
+    width: 78.76%;
+    margin: auto;
+    padding: 0 20px;
+}
+.updates-content_info b {
+    font-weight: 500;
+}
+
+/* --------News/Anoun------------------------------------------------------------------ */
+.content-block__news-announcements {
+    /* width: 50%; */
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+}
+._news-content {
+    display: block;
+    max-height: 665px;
+}
+.news_content-item {
+    display: flex;
+    font-size: 14px;
+    color: #000;
+    height: 48px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+}
+.sec-type_content-info {
+    width: 86.32%;
+    margin: auto;
+    padding: 0 20px;
+}
+.sec-type_content-info b {
+    font-weight: 500;
+}
+
+._news-announcements_announcements {
+    display: block;
+}
+.announcements_content-item {
+    display: flex;
+    font-size: 14px;
+    color: #000;
+    height: 47.63px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+}
+
+/* --------Новое на сайте/Фильтр/Рекомендуем видео------------------------------------------------------------------ */
+.new-filter_filter {
+    width: 27.38%;
+}
+.new-filter__container {
+    display: flex;
+}
+.new-filter_new-on-page {
+    width: 72.62%;
+    display: block;
+    margin-right: 20px;
+}
+.new-on-page_content {
+    display: flex;
+    flex-wrap: wrap;
+}
+.new-on-page_header {
+    width: 100%;
+    height: 50px;
+    text-align: left;
+    background: #443B3B;
+    color: #fff;
+    border-top: 2px solid #FF6666;
+    border-bottom: 2px solid #FF6666;
+}
+.new-on-page_header-name {
+    background: #FF6666;
+    max-width: max-content;
+    padding: 17px 30px;
+}
+
+.content_item {
+    display: flex;
+    background: #FFFEFE;
+    width: 49%;
+    margin-bottom: 20px;
+}
+.costyl1 {
+    margin-left: 2%;
+}
+.content_item-image {
+    margin-right: 12px;
+}
+.content_item-content {
+    display: block;
+    padding-top: 12px;
+}
+.item-content_1st-line {
+    font-size: 14px;
+    font-weight: 500;
+    
+}
+.item-content_2nd-line {
+    display: flex;
+    
+}
+/* .item-content_2nd-line-star, .rating_container {
+    margin-right: 12px;
+} */
+.item-content_2nd-line-star {
+    margin-right: 12px;
+}
+.rating_container {
+    position: relative;
+    margin-right: 12px;
+    padding-top: 2px;
+}
+.item-content_2nd-line h4 {
+    font-size: 12px;
+    line-height: 15px;
+    padding-top: 3px;
+}
+.rating_container h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #fff;
+}
+.item-content_3rd-line{
+    font-size: 12px;
+}
+.item-content_4th-line{
+    font-size: 12px;
+    font-weight: 500;
+    color: #FF6666;
+}
+.item-content_4th-line b {
+    color: #000;
+}
+.item-content_5th-line {
+    font-size: 12px;
+}
+.item-content_5th-line b {
+    font-weight: 500;
+}
+.item-content_3rd-line, .item-content_4th-line, .item-content_1st-line, .item-content_2nd-line {
+    margin-bottom: 10px;
+}
+
+/* --------Фильтр------------------------------------------------------------------ */
+
+.filter_filter {
+    margin-bottom: 20px;
+    display: block;
+}
+.filter_filter-header {
+    width: 100%;
+    height: 50px;
+    padding: 18px 5px;
+    text-align: center;
+    background: #443B3B;
+    color: #fff;
+    border-top: 2px solid #FF6666;
+    border-bottom: 2px solid #FF6666;
+}
+.filter_filter-content {
+    background: #fff;
+}
+.form_container {
+    display: block;
+}
+.filter-content_form-genres, .filter-content_form-types, .filter-content_form-status, .filter-content_form-year, .filter-content_form-rating, .filter-content_form-sort {
+    font-size: 15px;
+    font-weight: 500;
+    padding: 12px 13px 0px 13px;
+    vertical-align: middle;
+}
+.select_genres, .select_types, .select_status, .select_rating, .select_sort {
+    width: 100%;
+    margin-top: 10px;
+    border: 2px solid #BEBEBE;
+    height: 30px;
+    font-family: inherit;
+    color: #A5A5A5;
+}
+option {
+    color: #000;
+}
+.year-inputs {
+    display: flex;
+    height: 30px;
+    font-family: inherit;
+    color: #A5A5A5;
+}
+.year-from {
+    width: 48%;
+    margin-right: 4%;
+    border: 2px solid #BEBEBE;
+}
+.year-to {
+    width: 48%;
+    border: 2px solid #BEBEBE;
+}
+.form_container {
+    border-bottom: 2px solid #BEBEBE;
+}
+.filter-content_form-sort {
+    padding-bottom: 20px;
+}
+.filter-content_form-button {
+    display: flex;
+    vertical-align: middle;
+    text-align: center;
+    padding: 0 50px;
+}
+.filter-button1, .filter-button2 {
+    background: #3CCE7B;
+    height: 32px;
+    margin: 18px 0;
+    color: #fff;
+    font-size: 15px;
+    font-family: inherit;
+
+}
+.filter-button1{
+    width: 70%;
+    margin-right: 2%;
+}
+.filter-button2 {
+    width: 28%;
+}
+
+
+.recomended {
+    display: block;
+}
+.recomended-header {
+    width: 100%;
+    height: 50px;
+    padding: 18px 5px;
+    text-align: center;
+    background: #443B3B;
+    color: #fff;
+    border-top: 2px solid #FF6666;
+    border-bottom: 2px solid #FF6666;
+}
+.link-image {
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+
+footer {
+    height: 112px;
+    background: #443b3bc0;
+    color: #fff;
+}
+.footer-text {
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+    padding: 10px 10px;
+}
+.footer-text b {
+    color: #FF6666;
+}
+
+.main-page_content {
+    padding: 10px;
+    width: 72.62%;
+    margin-right: 20px;
+    display: block;
+    background: #fff;
+}
+
+.new-filter_new-on-page2 {
+    display: flex;
+}
+.description_header {
+    width: 63%;
+}
+.description_image {
+    height: 308px;
+    margin-left: auto;
+}
+.description_header b {
+    color: #000;
+    font-weight: 500;
+}
+.description_header h1 {
+    font-weight: 500;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.description_header h2 {
+    font-weight: 400;
+    font-size: 17px;
+}
+.description_genre, .description_studio, .description_director, .description_voice-acting {
+    color: #FF6666;
+}
+.item-content_2nd-line, .description_other-names, .description_status, .description_year, .description_season, .description_rating, .description_genre, .description_original, .description_studio, .description_director, .description_type, .description_series-count, .description_transate, .watcing, .description_status {
+    margin-bottom: 20px;
+}
+.description_year {
+    margin-top: 20px;
+}
+.description_status {
+    display: flex;
+}
+.status_content {
+    position: relative;
+}
+.description_status {
+    vertical-align: middle;
+    margin: auto;
+}
+.description_status h2 {
+    margin: auto 10px auto 0;
+}
+.status_content h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #fff;
+}
+.description_other-names {
+    font-weight: 400;
+    font-size: 17px;
+}
+.description_header-phone {
+    display: none;
+}
+.description_header-phone b {
+    color: #000;
+    font-weight: 500;
+}
+.description_header-phone h1 {
+    font-weight: 500;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.description_header-phone h2 {
+    font-weight: 400;
+    font-size: 17px;
+}
+.short_description {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 21px;
+}
+.order_button {
+    font-weight: 400;
+    font-family: inherit;
+    padding: 10px 24px;
+    background: #3CCE7B;
+    font-size: 17px;
+    line-height: 21px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+.player_block-header {
+    display: flex;
+    width: 100%;
+    height: 50px;
+    text-align: left;
+    background: #443B3B;
+    color: #fff;
+    border-top: 2px solid #FF6666;
+    border-bottom: 2px solid #FF6666;
+    margin-bottom: 20px;
+}
+.active-button {
+    background: #FF6666;
+}
+.not_active-button {
+    background: #443B3B;
+
+}
+.header_button {
+    padding: 16px 20px;
+    color: inherit;
+}
+.select_audio_player {
+    display: flex;
+    margin-bottom: 20px;
+}
+.player_block-msg {
+    color: #3CCE7B;
+    font-weight: 500;
+}
+.select_audio, .select_player {
+
+    font-size: 15px;
+    font-weight: 500;
+    font-family: inherit;
+    width: 49.5%;
+    margin-top: 10px;
+    border: 2px solid #BEBEBE;
+    height: 30px;
+    font-family: inherit;
+    color: #A5A5A5;
+}
+.select_player {
+    margin-left: 1%;
+}
+.batch_number {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.batch_number-item {
+    font-family: inherit;
+    font-size: 22px;
+    font-style: italic;
+    font-weight: 400;
+    text-align: center;
+    align-content: center;
+    width: 6.25%;
+    padding: 9px 0;
+    margin-right: 5px;
+    background: #443B3B;
+    color: #fff;
+}
+
+.faq {
+    background: #ECE9E9;
+    font-style: italic;
+    font-size: 17px;
+    line-height: 21px;
+    border-left: 2px solid #FF6666;
+    padding: 8px 5px;
+    margin-bottom: 20px;
+}
+.share {
+    font-style: italic;
+    font-size: 17px;
+    padding: 0px 5px;
+    margin-bottom: 20px;
+    line-height: 22px;
+}
+.load-comments {
+    width: 39%;
+    margin: 0 auto;
+}
